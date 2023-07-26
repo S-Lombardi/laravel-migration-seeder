@@ -33,6 +33,7 @@
                     </thead>
                     @foreach($trains as $train)
                     <tbody>
+                        @if($train->data_partenza === $train->data_odierna)
                         <tr>
                             <td>
                                 <span>
@@ -79,6 +80,7 @@
                                     {{$train->cancellato ? 'si' : 'no'}}
                             </td>
                         </tr>
+                        @endif
                     </tbody>
                     @endforeach
                 </table>
