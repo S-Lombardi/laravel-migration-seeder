@@ -61,11 +61,23 @@
                             </td>
                             <td>
                                 <span>
-                                    {{$train->stazione_arrivo}}
+                                    {{$train->codice_treno}}
                                 </span>
                             </td>
-
-                         
+                            <td>
+                                <span>
+                                    {{$train->numero_carrozze}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{$train->in_orario ? 'si' : 'no'}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{$train->cancellato ? 'si' : 'no'}}
+                            </td>
                         </tr>
                     </tbody>
                     @endforeach
