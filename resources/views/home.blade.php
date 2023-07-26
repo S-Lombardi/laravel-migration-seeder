@@ -85,6 +85,11 @@
                     @endforeach
                 </table>
                 
+                @if($train->data_partenza !== $train->data_odierna)
+                    <div>
+                        <h3>Nessun altro treno treno in partenza</h3>
+                    </div>
+                @endif
             </div>
         </main>
     </body>
