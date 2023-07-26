@@ -65,9 +65,9 @@
                                 </span>
                             </td>
                             <td>
-                                <span>
+                                <div class="text-center">
                                     {{$train->numero_carrozze}}
-                                </span>
+                                </div>
                             </td>
                             <td>
                                 <span>
