@@ -15,13 +15,62 @@
 
     </head>
     <body>
-        <main class="bg-light">
+        <main>
             <div class="container">
-                @foreach($trains as $train)
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col">Azienda</th>
+                            <th class="col">Stazione partenza</th>
+                            <th class="col">Stazione arrivo</th>
+                            <th class="col">Partenza</th>
+                            <th class="col">Arrivo</th>
+                            <th class="col">Codice</th>
+                            <th class="col">n°carrozze</th>
+                            <th class="col">In orario</th>
+                            <th class="col">Cancellato</th>
+                        </tr>
+                    </thead>
+                    @foreach($trains as $train)
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>
+                                    {{$train->azienda}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{$train->stazione_partenza}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{$train->stazione_arrivo}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{substr($train->orario_partenza,0,5)}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{substr($train->orario_arrivo,0,5)}}
+                                </span>
+                            </td>
+                            <td>
+                                <span>
+                                    {{$train->stazione_arrivo}}
+                                </span>
+                            </td>
+
+                         
+                        </tr>
+                    </tbody>
+                    @endforeach
+                </table>
                 
-                    <div>{{$train->azienda}}</div>
-                
-                @endforeach
             </div>
         </main>
     </body>
