@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//collegamento con il file Controller
+use App\Http\Controllers\Guest\TrainController;
+
 
 /*
 |--------------------------------------------------------------------------
