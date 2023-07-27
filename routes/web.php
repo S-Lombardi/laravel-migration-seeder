@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 //collegamento con il file Controller
 use App\Http\Controllers\Guest\TrainController;
+use App\Http\Controllers\Guest\PasseggeriController;
 
 
 /*
@@ -17,4 +18,7 @@ use App\Http\Controllers\Guest\TrainController;
 */
 
 Route::get('/', [TrainController::class, 'index']);
+Route::get('/', [PasseggeriController::class, 'index']);
+
+
 
