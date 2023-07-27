@@ -31,7 +31,7 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             $table->dropColumn('data_partenza');
-            $table->dropColumn('data_partenza');
+            $table->dropColumn('data_odierna');
         });
     }
 };
