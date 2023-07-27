@@ -33,7 +33,7 @@
                     </thead>
                     @foreach($trains as $train)
                     <tbody>
-                        @if($train->data_partenza === date("Y-m-d"))
+                        @if($train->data_partenza === date("Y-m-d" ))
                         <tr>
                             <td>
                                 <span>
@@ -86,9 +86,9 @@
                     @endforeach
                 </table>
                 
-                @if($train->data_partenza !== date("Y-m-d"))
+                @if($train->data_partenza !== date("Y-m-d" ))
                     <div>
-                        <h3>Nessun altro treno treno in partenza</h3>
+                        <h3>Nessun treno in partenza</h3>
                     </div>
                 @endif
             </div>
