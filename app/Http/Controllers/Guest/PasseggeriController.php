@@ -10,8 +10,8 @@ class PasseggeriController extends Controller
 {   
     //Con funzione all() vado a prendere tutti i dati dal db    
     public function index(){
-        $passeggeri = Passeggeri::all();
+        $passengers = Passeggeri::all();
         //dd($trains);
-        return view('home', compact ('passeggeri'));
+        return view('home', compact ('passengers'));
     }  
 }
