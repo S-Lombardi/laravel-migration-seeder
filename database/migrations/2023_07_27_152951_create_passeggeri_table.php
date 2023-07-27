@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('passeggeri', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('cognome');
+            $table->string('email');
+            $table->integer('numero_telefono');
+            $table->string('codice_biglietto');
+            $table->string('posto_a_sedere');
+            $table->boolean('classe');
+            $table->boolean('tariffa_ridotta');
             $table->timestamps();
         });
     }
