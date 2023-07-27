@@ -10,6 +10,9 @@ use Faker\Generator as Faker;
 //importo il db da Models
 use App\Models\Train;
 
+//importo libreria Faker
+use Faker\Provider\en_US\Address;
+
 class TrainsTableSeeder extends Seeder
 {
     /**
@@ -17,8 +20,15 @@ class TrainsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        
+    public function run(Faker $faker)
+    {   
+        for($i=0; $i<4;$i++){
+            $train = new Train ();
+            $train->azienda = $faker->word();
+            $train->stazione_patenza = $faker->city();
+            $train->stazione_arrivo = $faker->city();
+          
+        }
+
     }
 }
